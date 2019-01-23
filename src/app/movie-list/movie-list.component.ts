@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Movie } from './../models/movie.model'
 
 @Component({
   selector: 'app-movie-list',
@@ -6,14 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movie-list.component.css']
 })
 export class MovieListComponent implements OnInit {
+  @Input() childMovies: Movie[];
 
   constructor() { }
 
   ngOnInit() {
   }
-  movies = [
-    {title: "Jurassic Park", year: 1993},
-    {title: "Iron Man 2", year: 2010}
-
-  ]
 }
