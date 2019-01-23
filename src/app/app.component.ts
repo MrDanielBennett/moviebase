@@ -8,10 +8,7 @@ import { Search } from './models/search.model'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  masterMovies: Movie[] = [
-    new Movie({title: "Jurassic Park", year: 1993}),
-    new Movie({title: "Iron Man 2", year: 2010})
-  ]
+  masterMovies: Movie[] = [];
 
   searchForMovies(params) {
     let promise = Search.searchMovies(params);

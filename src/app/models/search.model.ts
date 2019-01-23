@@ -8,9 +8,9 @@ export class Search {
       yearParams = `primary_release_year=${params.year}&`;
     }
     if(params.title) {
-      titleParams = ``;
+      titleParams = `query=${params.title}&`;
     }
-    const url = `https://api.themoviedb.org/3/discover/movie?${yearParams}${titleParams}sort_by=popularity.desc&api_key=${environment["THE_MOVIE_DB_KEY"]}`;
+    const url = `https://api.themoviedb.org/3/search/movie?${yearParams}${titleParams}sort_by=popularity.desc&api_key=${environment["THE_MOVIE_DB_KEY"]}`;
     return fetch(url).then(function(response) {
       return response.json();
     });
