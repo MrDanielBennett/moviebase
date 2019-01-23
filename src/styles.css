@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  font-size: 10px;
+  font-family: Verdana, sans-serif;
+}
+
+body {
+  font-size: 1.7rem;
+}
+
+#movie-list {
+  display: inline-block;
+}
+
+.movie {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  margin: 0.5em;
+  background-color: #f8f8f8;
+}
+
+.title {
+  font-size: 1.2em;
+  margin: 0.5em;
+}
+
+.year {
+  color: #585858;
+  margin: 0.5em;
+}

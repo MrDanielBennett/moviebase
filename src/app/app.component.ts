@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  movies = [
+    {title: "Jurassic Park", year: 1993},
+    {title: "Iron Man 2", year: 2010}
+
+  ]
 }
