@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Movie } from './models/movie.model'
+import { Search } from './models/search.model'
 
 @Component({
   selector: 'app-root',
@@ -13,8 +14,15 @@ export class AppComponent {
   ]
 
   searchForMovies(params) {
-    console.log("params", params);
-
+    let promise = Search.searchMovies(params);
+    promise.then((data) => {
+      console.log("search data", data);
+      this.masterMovies = [];
+      data.results.forEach((movieData) => {
+        let movie = new Movie({title: movieData.original_title, year: movieData.release_date});
+        this.masterMovies.push(movie);
+      })
+    });
   }
   // this.title = parameters.title;
   // this.year = parameters.year;
