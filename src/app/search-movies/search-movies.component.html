@@ -1,3 +1,9 @@
-<p>
-  search-movies works!
-</p>
+<div class="movie-search">
+  <form id="movie-form">
+    <label>Search by Title: </label>
+    <input #titleSearch>
+    <label>Search by Year: </label>
+    <input #yearSearch>
+    <button (click)="searchMovies(titleSearch.value, yearSearch.value)">Search</button>
+  </form>
+</div>

@@ -1,13 +1,3 @@
 <h1>Moviebase</h1>
-<div class="movie-search">
-  <form id="movie-form">
-    <label for="title-search">Search by Title: </label>
-    <input type="text" id="title-search" value="">
-    <label for="year-search">Search by Year: </label>
-    <input type="text" id="year-search" value="">
-    <button type="submit" name="button">Search</button>
-  </form>
-</div>
-<div>
-  <app-movie-list [childMovies]="masterMovies"></app-movie-list>
-</div>
+<app-search-movies (sendSearch)="searchForMovies($event)"></app-search-movies>
+<app-movie-list [childMovies]="masterMovies"></app-movie-list>

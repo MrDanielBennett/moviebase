@@ -12,7 +12,8 @@ export class AppComponent {
     new Movie({title: "Iron Man 2", year: 2010})
   ]
 
-  searchMovies(year) {
+  searchForMovies(params) {
+    console.log("params", params);
 
   }
   // this.title = parameters.title;
