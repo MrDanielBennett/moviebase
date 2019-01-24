@@ -13,6 +13,4 @@ export class SearchMoviesComponent {
     let movieSearch = {title: title, year: year};
     this.sendSearch.emit(movieSearch);
   }
-
-
 }
